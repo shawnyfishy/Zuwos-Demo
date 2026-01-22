@@ -54,20 +54,21 @@ const GameChanger: React.FC = () => {
           className="w-full h-full absolute inset-0 text-black dark:text-[#FFFFFF]"
           viewBox="0 0 200 200"
         >
+          {/* Increased radius from 75 to 95 for max size within viewBox */}
           <path
             id="circlePath"
-            d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+            d="M 100, 100 m -95, 0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"
             fill="none"
             stroke="currentColor"
             strokeWidth="0.5"
             className="opacity-50"
           />
-          {/* Prominent Circular Text */}
-          <text className="text-[12.5px] uppercase font-bold tracking-[0.1em]" fill="currentColor">
+          {/* Prominent Circular Text - textLength updated for new circumference (2 * pi * 95 approx 597) */}
+          <text className="text-[14px] uppercase font-bold tracking-[0.1em]" fill="currentColor">
             <textPath
               href="#circlePath"
               startOffset="0%"
-              textLength="471"
+              textLength="597"
               lengthAdjust="spacing"
             >
               EARN POINTS → REDEEM REWARDS → GET MOTIVATED → REPEAT →
@@ -75,12 +76,12 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content */}
+        {/* Center Content - Scaled down for elegance */}
         <div ref={titleReveal} className="text-center z-10 relative pointer-events-none">
-          <h3 className="text-6xl md:text-[8vw] font-bold tracking-tighter leading-none">
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none opacity-90">
             DOPAMINE
           </h3>
-          <h3 className="text-6xl md:text-[8vw] font-bold tracking-tighter leading-none">
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none opacity-90">
             LOOP
           </h3>
         </div>
