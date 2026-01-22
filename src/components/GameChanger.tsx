@@ -46,8 +46,8 @@ const GameChanger: React.FC = () => {
   return (
     <section ref={containerRef} className="min-h-screen w-full flex flex-col items-center justify-center py-24 relative overflow-hidden bg-[#FFFFFF] dark:bg-[#050505] text-black dark:text-[#FFFFFF] transition-colors duration-500">
 
-      {/* 2x More Zoom Out: w-[40vw] md:w-[140px] */}
-      <div className="relative w-[40vw] md:w-[140px] aspect-square flex items-center justify-center">
+      {/* Increased size: w-[70vw] md:w-[320px] for better impact */}
+      <div className="relative w-[70vw] md:w-[320px] aspect-square flex items-center justify-center">
         {/* SVG Circle */}
         <svg
           ref={circleRef}
@@ -77,20 +77,18 @@ const GameChanger: React.FC = () => {
 
         {/* Center Content */}
         <div ref={titleReveal} className="text-center z-10 relative pointer-events-none">
-          {/* Increased text size 2x as requested */}
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none">
             DOPAMINE
           </h3>
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none">
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none">
             LOOP
           </h3>
         </div>
 
-        {/* ... (Keep Left/Right Groups same) ... */}
-        {/* LEFT GROUP: Earn Points */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 md:-translate-x-36 group z-20">
+        {/* LEFT GROUP: Earn Points (Larger offset to accommodate larger circle) */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 md:-translate-x-48 group z-20">
           <span
-            className="text-xs font-bold font-mono uppercase border-2 border-current px-3 py-1.5 md:px-4 md:py-2 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-lg text-[10px] md:text-xs"
+            className="text-xs font-bold font-mono uppercase border-2 border-current px-3 py-1.5 md:px-5 md:py-2.5 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-lg text-[10px] md:text-xs"
             onMouseEnter={() => setActiveInfo('earn')}
             onMouseLeave={() => setActiveInfo(null)}
           >
@@ -99,7 +97,7 @@ const GameChanger: React.FC = () => {
           {/* Tooltip */}
           <div
             className={`
-                    absolute top-10 w-64 p-5 
+                    absolute top-12 w-64 p-5 
                     left-0 md:left-auto md:right-0
                     bg-white dark:bg-[#050505] 
                     border-2 border-black dark:border-[#FFFFFF]
@@ -117,10 +115,10 @@ const GameChanger: React.FC = () => {
           </div>
         </div>
 
-        {/* RIGHT GROUP: Redeem Rewards */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 md:translate-x-36 group z-20">
+        {/* RIGHT GROUP: Redeem Rewards (Larger offset) */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 md:translate-x-48 group z-20">
           <span
-            className="text-xs font-bold font-mono uppercase border-2 border-current px-3 py-1.5 md:px-4 md:py-2 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-lg text-[10px] md:text-xs"
+            className="text-xs font-bold font-mono uppercase border-2 border-current px-3 py-1.5 md:px-5 md:py-2.5 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-lg text-[10px] md:text-xs"
             onMouseEnter={() => setActiveInfo('redeem')}
             onMouseLeave={() => setActiveInfo(null)}
           >
@@ -129,7 +127,7 @@ const GameChanger: React.FC = () => {
           {/* Tooltip */}
           <div
             className={`
-                    absolute top-10 w-64 text-left p-5 
+                    absolute top-12 w-64 text-left p-5 
                     right-0 md:right-auto md:left-0
                     bg-white dark:bg-[#050505] 
                     border-2 border-black dark:border-[#FFFFFF] 
