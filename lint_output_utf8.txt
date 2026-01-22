@@ -1,0 +1,20 @@
+﻿
+C:\Users\dhana\OneDrive\Desktop\ZUWOS website antigravity\src\App.tsx
+  20:10  error  'isDarkMode' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dhana\OneDrive\Desktop\ZUWOS website antigravity\src\components\Challengers.tsx
+  3:10  error  'ScrollTrigger' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dhana\OneDrive\Desktop\ZUWOS website antigravity\src\components\Footer.tsx
+  23:20  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dhana\OneDrive\Desktop\ZUWOS website antigravity\src\components\GameChanger.tsx
+  3:10  error  'ScrollTrigger' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dhana\OneDrive\Desktop\ZUWOS website antigravity\src\components\GenZReality.tsx
+   3:10  error  'ScrollTrigger' is defined but never used                        @typescript-eslint/no-unused-vars
+  80:60  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  80:99  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+Γ£û 7 problems (7 errors, 0 warnings)
+
