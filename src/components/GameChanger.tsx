@@ -54,21 +54,21 @@ const GameChanger: React.FC = () => {
           className="w-full h-full absolute inset-0 text-black dark:text-[#FFFFFF]"
           viewBox="0 0 200 200"
         >
-          {/* Increased radius from 75 to 95 for max size within viewBox */}
+          {/* Reduced radius from 95 to 85 for better legibility of rotating text */}
           <path
             id="circlePath"
-            d="M 100, 100 m -95, 0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"
+            d="M 100, 100 m -85, 0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0"
             fill="none"
             stroke="currentColor"
             strokeWidth="0.5"
             className="opacity-50"
           />
-          {/* Prominent Circular Text - textLength updated for new circumference (2 * pi * 95 approx 597) */}
+          {/* Prominent Circular Text - textLength updated for radius 85 (2 * pi * 85 approx 534) */}
           <text className="text-[14px] uppercase font-bold tracking-[0.1em]" fill="currentColor">
             <textPath
               href="#circlePath"
               startOffset="0%"
-              textLength="597"
+              textLength="534"
               lengthAdjust="spacing"
             >
               EARN POINTS → REDEEM REWARDS → GET MOTIVATED → REPEAT →
