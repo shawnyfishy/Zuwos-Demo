@@ -3,6 +3,7 @@ import gsap from 'gsap';
 
 
 import { useReveal } from '../hooks/useReveal';
+import { soundEngine } from '../services/SoundEngine';
 
 const GameChanger: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,11 +13,17 @@ const GameChanger: React.FC = () => {
   const titleReveal = useReveal({ direction: 'up', duration: 1.2 });
   const footerReveal = useReveal({ direction: 'up', duration: 1.2, delay: 0.2 });
 
+  const handleTriangleClick = () => {
+    soundEngine.playClick();
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useLayoutEffect(() => {
-    // ... (keep existing GSAP Logic) ...
     const ctx = gsap.context(() => {
-      // Rotate the circle based on scroll
-      // Starting from a rotation that places "EARN POINTS" near the top if possible
+      // ... existing GSAP logic ...
       gsap.to(circleRef.current, {
         rotation: 360,
         ease: "none",
@@ -28,7 +35,6 @@ const GameChanger: React.FC = () => {
         }
       });
 
-      // Reveal text
       gsap.from(".loop-text", {
         y: 100,
         opacity: 0,
@@ -76,8 +82,16 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content - Iconic White Triangle */}
-        <div ref={titleReveal} className="z-10 relative pointer-events-none flex items-center justify-center">
+        {/* Center Content - Iconic White Triangle (Functional) */}
+        <div
+          ref={titleReveal}
+          onClick={handleTriangleClick}
+          onMouseEnter={() => {
+            soundEngine.init();
+            soundEngine.playHover();
+          }}
+          className="z-10 relative flex items-center justify-center cursor-pointer pointer-events-auto hover:scale-110 transition-transform duration-300"
+        >
           <svg
             width="80"
             height="80"

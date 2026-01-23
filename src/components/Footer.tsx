@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const magneticRef = useMagnetic(0.15); // Subtle magnetic pull
 
   return (
-    <footer className="w-full bg-[#050505] text-[#FFFFFF] py-32 px-4 md:px-12 flex flex-col min-h-screen justify-between">
+    <footer id="footer" className="w-full bg-[#050505] text-[#FFFFFF] py-32 px-4 md:px-12 flex flex-col min-h-screen justify-between">
       <div>
         <div className="flex justify-between items-start border-b border-white/20 pb-8 mb-24">
           <span className="font-mono text-sm">[START DOMINATING]</span>
