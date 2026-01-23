@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Massive CTA */}
+        {/* Massive CTA Overhaul */}
         <Link
           to="/book-demo"
           ref={magneticRef}
@@ -38,18 +38,27 @@ const Footer: React.FC = () => {
             soundEngine.playHover();
           }}
           onClick={() => soundEngine.playClick()}
-          className="group relative flex items-center justify-between w-full border-t border-white/20 pt-12 mt-12 hover:border-white transition-colors duration-500"
+          className="group relative flex items-center justify-between w-full border-t border-white/10 pt-16 mt-12 transition-all duration-700 hover:border-white overflow-hidden"
         >
-          <span className="text-[10vw] md:text-[14vw] font-bold tracking-tighter leading-none group-hover:italic transition-all duration-500 text-white">
-            BOOK DEMO
-          </span>
+          {/* Animated Glow Background on Hover */}
+          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none" />
 
-          {/* Reveal Button */}
-          <div className="hidden md:flex bg-white text-black rounded-full p-8 md:p-12 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 -translate-x-20 group-hover:translate-x-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] items-center justify-center">
-            <ArrowUpRight size={64} strokeWidth={1.5} />
+          <div className="flex flex-col">
+            <span className="text-[10vw] md:text-[14vw] font-black tracking-tighter leading-[0.8] group-hover:italic transition-all duration-700 text-white flex items-center gap-4">
+              BOOK DEMO
+            </span>
+            <span className="text-xs font-mono uppercase tracking-[0.4em] opacity-30 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-700 mt-4">
+              [ SECURE YOUR SLOT FOR V1.0 ]
+            </span>
           </div>
-          {/* Mobile Arrow (Always visible) */}
-          <div className="md:hidden text-white">
+
+          {/* Reveal Button - Hyper-sized and kinetic */}
+          <div className="hidden md:flex bg-white text-black rounded-full p-10 md:p-16 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 -translate-x-32 group-hover:translate-x-0 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+            <ArrowUpRight size={80} strokeWidth={1} className="group-hover:rotate-12 transition-transform duration-700" />
+          </div>
+
+          {/* Mobile Arrow */}
+          <div className="md:hidden text-white opacity-50 group-hover:opacity-100 transition-opacity">
             <ArrowUpRight size={48} />
           </div>
         </Link>

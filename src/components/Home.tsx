@@ -14,6 +14,7 @@ import GameChanger from './GameChanger';
 import FreedomTrio from './FreedomTrio';
 import SocialProof from './SocialProof';
 import Footer from './Footer';
+import FloatingCTA from './FloatingCTA';
 import { soundEngine } from '../services/SoundEngine';
 
 gsap.registerPlugin(ScrollTrigger);

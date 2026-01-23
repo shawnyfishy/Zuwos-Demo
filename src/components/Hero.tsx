@@ -153,21 +153,29 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-          <button
-            ref={magneticBtnRef}
-            onClick={handleScrollToContent}
-            onMouseEnter={() => {
-              soundEngine.init();
-              soundEngine.playHover();
-            }}
-            className="group relative mt-12 px-10 py-5 bg-transparent border-[1.5px] border-[#050505] text-[#050505] rounded-full uppercase tracking-widest text-xs md:text-sm font-bold overflow-hidden transition-all duration-300 hover:pr-12 cursor-pointer shadow-sm hover:shadow-xl"
-          >
-            <span className="relative z-10 flex items-center gap-3 transition-colors duration-500 group-hover:text-[#FFFFFF]">
-              Gain Complete Control
-              <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
-            </span>
-            <div className="absolute inset-0 bg-[#050505] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]" />
-          </button>
+          <div className="flex flex-col items-center gap-4">
+            <button
+              ref={magneticBtnRef}
+              onClick={handleScrollToContent}
+              onMouseEnter={() => {
+                soundEngine.init();
+                soundEngine.playHover();
+              }}
+              className="group relative px-12 py-6 bg-transparent border-[1.5px] border-[#050505] text-[#050505] rounded-full uppercase tracking-[0.2em] text-xs md:text-sm font-black overflow-hidden transition-all duration-300 transform hover:scale-105 cursor-pointer shadow-sm hover:shadow-[0_0_30px_rgba(0,0,0,0.1)] active:scale-95"
+            >
+              <span className="relative z-10 flex items-center gap-4 transition-colors duration-500 group-hover:text-[#FFFFFF]">
+                Gain Complete Control
+                <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 bg-[#050505] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
+            </button>
+            <div className="flex flex-col items-center gap-1 opacity-40">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em]">
+                Join 500+ High-Performance Teams
+              </span>
+              <div className="h-[1px] w-12 bg-black/20" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
