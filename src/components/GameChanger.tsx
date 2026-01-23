@@ -10,7 +10,6 @@ const GameChanger: React.FC = () => {
   const circleRef = useRef<SVGSVGElement>(null);
   const [activeInfo, setActiveInfo] = useState<'earn' | 'redeem' | null>(null);
 
-  const titleReveal = useReveal({ direction: 'up', duration: 1.2 });
   const footerReveal = useReveal({ direction: 'up', duration: 1.2, delay: 0.2 });
 
   useLayoutEffect(() => {
@@ -74,28 +73,8 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content - Iconic White Triangle (Visual Only) */}
-        <div
-          ref={titleReveal}
-          onMouseEnter={() => {
-            soundEngine.init();
-            soundEngine.playHover();
-          }}
-          className="z-10 relative flex items-center justify-center pointer-events-auto hover:scale-110 transition-transform duration-300"
-        >
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 100 100"
-            className="drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-          >
-            <polygon
-              points="30,20 85,50 30,80"
-              fill="#FFFFFF"
-              className="dark:fill-white fill-black dark:drop-shadow-none drop-shadow-lg"
-            />
-          </svg>
-        </div>
+        {/* Center Content - Empty Circle as requested */}
+
 
         {/* LEFT GROUP: Earn Points (Brought closer per user request) */}
         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[calc(50%+42vw)] md:-translate-x-[calc(50%+320px)] group z-20">
