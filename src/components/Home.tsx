@@ -124,6 +124,7 @@ const Home: React.FC = () => {
 
             {/* 7. CALL TO ACTION & FOOTER */}
             <Footer />
+            <FloatingCTA />
 
             {/* Minimal Scroll to Top Footer */}
             <div className="w-full py-12 bg-black flex flex-col items-center justify-center border-t border-white/10 mt-auto">
