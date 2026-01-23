@@ -13,14 +13,6 @@ const GameChanger: React.FC = () => {
   const titleReveal = useReveal({ direction: 'up', duration: 1.2 });
   const footerReveal = useReveal({ direction: 'up', duration: 1.2, delay: 0.2 });
 
-  const handleTriangleClick = () => {
-    soundEngine.playClick();
-    const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       // ... existing GSAP logic ...
@@ -82,15 +74,14 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content - Iconic White Triangle (Functional) */}
+        {/* Center Content - Iconic White Triangle (Visual Only) */}
         <div
           ref={titleReveal}
-          onClick={handleTriangleClick}
           onMouseEnter={() => {
             soundEngine.init();
             soundEngine.playHover();
           }}
-          className="z-10 relative flex items-center justify-center cursor-pointer pointer-events-auto hover:scale-110 transition-transform duration-300"
+          className="z-10 relative flex items-center justify-center pointer-events-auto hover:scale-110 transition-transform duration-300"
         >
           <svg
             width="80"
