@@ -63,8 +63,8 @@ const GameChanger: React.FC = () => {
             strokeWidth="0.5"
             className="opacity-50"
           />
-          {/* Prominent Circular Text - textLength updated for radius 85 (2 * pi * 85 approx 534) */}
-          <text className="text-[14px] uppercase font-bold tracking-[0.1em]" fill="currentColor">
+          {/* Rotating Text - Slightly larger for presence */}
+          <text className="text-[16px] uppercase font-bold tracking-[0.2em]" fill="currentColor">
             <textPath
               href="#circlePath"
               startOffset="0%"
@@ -76,12 +76,12 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content - Scaled down for elegance */}
+        {/* Center Content - "Slightly bigger" than rotating text for a refined look */}
         <div ref={titleReveal} className="text-center z-10 relative pointer-events-none">
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none opacity-90">
+          <h3 className="text-xl md:text-2xl font-bold tracking-widest leading-none opacity-90">
             DOPAMINE
           </h3>
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-none opacity-90">
+          <h3 className="text-xl md:text-2xl font-bold tracking-widest leading-none opacity-90">
             LOOP
           </h3>
         </div>
