@@ -76,14 +76,20 @@ const GameChanger: React.FC = () => {
           </text>
         </svg>
 
-        {/* Center Content - "Slightly bigger" than rotating text for a refined look */}
-        <div ref={titleReveal} className="text-center z-10 relative pointer-events-none">
-          <h3 className="text-xl md:text-2xl font-bold tracking-widest leading-none opacity-90">
-            DOPAMINE
-          </h3>
-          <h3 className="text-xl md:text-2xl font-bold tracking-widest leading-none opacity-90">
-            LOOP
-          </h3>
+        {/* Center Content - Iconic White Triangle */}
+        <div ref={titleReveal} className="z-10 relative pointer-events-none flex items-center justify-center">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 100 100"
+            className="drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+          >
+            <polygon
+              points="30,20 85,50 30,80"
+              fill="#FFFFFF"
+              className="dark:fill-white fill-black dark:drop-shadow-none drop-shadow-lg"
+            />
+          </svg>
         </div>
 
         {/* LEFT GROUP: Earn Points (Brought closer per user request) */}
