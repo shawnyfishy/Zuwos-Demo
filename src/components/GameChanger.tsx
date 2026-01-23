@@ -86,8 +86,8 @@ const GameChanger: React.FC = () => {
           </h3>
         </div>
 
-        {/* LEFT GROUP: Earn Points (Mathematically symmetrical offset) */}
-        <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[calc(50%+42vw)] md:-translate-x-[calc(50%+400px)] group z-20">
+        {/* LEFT GROUP: Earn Points (Brought closer per user request) */}
+        <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[calc(50%+42vw)] md:-translate-x-[calc(50%+320px)] group z-20">
           <span
             className="text-xs font-bold font-mono uppercase border-2 border-current px-4 py-2 md:px-6 md:py-3.5 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-xl text-[12px] md:text-sm"
             onMouseEnter={() => setActiveInfo('earn')}
@@ -116,7 +116,7 @@ const GameChanger: React.FC = () => {
           </div>
         </div>
 
-        {/* RIGHT GROUP: Redeem Rewards (Mathematically symmetrical offset) */}
+        {/* RIGHT GROUP: Redeem Rewards (Distance remains at 400px) */}
         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-[calc(-50%+25vw)] md:translate-x-[calc(-50%+400px)] group z-20">
           <span
             className="text-xs font-bold font-mono uppercase border-2 border-current px-4 py-2 md:px-6 md:py-3.5 rounded-full cursor-pointer bg-[#FFFFFF] dark:bg-[#050505] hover:bg-black hover:text-[#FFFFFF] dark:hover:bg-[#FFFFFF] dark:hover:text-black transition-all whitespace-nowrap shadow-xl text-[12px] md:text-sm"
